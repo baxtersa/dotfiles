@@ -30,9 +30,8 @@
 (global-set-key (kbd "C-c w") 'whitespace-mode)
 ;; show unnecessary whitespace that can mess up your diff
 (add-hook 'prog-mode-hook (lambda () (interactive) (setq show-trailing-whitespace 1)))
-;; use tab to indent by default
-(setq-default indent-tabs-mode t)
 ;; set appearance of a tab that is represeted by 4 spaces
+(setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
 
 (global-linum-mode 1)
