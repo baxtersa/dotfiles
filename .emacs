@@ -67,3 +67,5 @@
 (put 'upcase-region 'disabled nil)
 (put 'downcase-region 'disabled nil)
 
+
+(add-to-list 'auto-mode-alist '("\\.scss\\'" . css-mode))
