@@ -3,7 +3,9 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-enabled-themes (quote (misterioso)))
+ '(ansi-color-faces-vector
+   [default default default italic underline success warning error])
+ '(custom-enabled-themes (quote (wombat)))
  '(ecb-layout-window-sizes
    (quote
     (("left8"
@@ -12,6 +14,7 @@
       (ecb-methods-buffer-name 0.20610687022900764 . 0.2972972972972973)
       (ecb-history-buffer-name 0.20610687022900764 . 0.16216216216216217)))))
  '(ecb-options-version "2.40")
+ '(ecb-source-path (quote (("/" "/"))))
  '(global-auto-revert-mode t)
  '(inhibit-startup-screen t))
 (custom-set-faces
@@ -57,14 +60,6 @@
     (package-install p)))
 
 (require 'ecb)
-(require 'yasnippet)
-(yas-global-mode 1)
-
-;; (require 'auto-complete-config)
-;; (add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
-;; (ac-config-default)
-;; (ac-set-trigger-key "TAB")
-;; (ac-set-trigger-key "<tab>")
 
 (let ((opam-share (ignore-errors (car (process-lines "opam" "config" "var" "share")))))
   (when (and opam-share (file-directory-p opam-share))
@@ -78,7 +73,11 @@
     (setq merlin-command 'opam)))
 
 (require 'clang-format)
-(global-set-key (kbd "C-<tab>") 'clang-format-region)
+(add-hook 'c++-mode
+          '(lambda ()
+             (local-set-key (kbd "C-<tab>") 'clang-format-region)
+             )
+          )
 (put 'upcase-region 'disabled nil)
 (put 'downcase-region 'disabled nil)
 
@@ -86,10 +85,10 @@
 (setq coq-prog-name "/usr/bin/coqtop")
 
 (add-hook 'tuareg-mode-hook
-   '(lambda ()
-   (local-set-key (kbd "C-c a") 'insert-arrow)
- )
-)
+          '(lambda ()
+             (local-set-key (kbd "C-c a") 'insert-arrow)
+             )
+          )
 
 (defun insert-arrow ()
   "Insert arrow."
@@ -98,7 +97,6 @@
 
 (add-to-list 'auto-mode-alist '("\\.scss\\'" . css-mode))
 (add-to-list 'load-path "/home/sbaxter/.opam/4.03.0/share/emacs/site-lisp")
-(require 'ocp-indent)
 
 (setq racer-rust-src-path "/usr/local/src/rustc-1.12.1/src")
 (add-hook 'rust-mode-hook #'racer-mode)
@@ -108,3 +106,13 @@
 (require 'rust-mode)
 (define-key rust-mode-map (kbd "TAB") #'company-indent-or-complete-common)
 (setq company-tootip-align-annotations t)
+
+(global-company-mode)
+(setq company-idle-delay 0)
+
+(global-flycheck-mode)
+
+(require 'spaceline-config)
+(spaceline-spacemacs-theme)
+
+(load-file "/home/sbaxter/.emacs.d/init.el")
