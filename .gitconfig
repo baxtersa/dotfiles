@@ -3,13 +3,13 @@
 	email = sbaxter@cs.umass.edu
 	signingKey = 62720783
 [core]
-	editor = emacs
+	editor = vim
 [push]
 	default = simple
 [alias]
 	llog = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)'
 [credential]
-	helper = cache
+	helper = /usr/share/git/credential/gnome-keyring/git-credential-gnome-keyring
 [gpg]
 	program = gpg2
 [commit]
