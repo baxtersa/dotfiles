@@ -9,10 +9,14 @@ set tabstop=4
 call dein#begin(expand('~/.nvim/dein')) " plugins' root path
 call dein#add('Shougo/dein.vim')
 call dein#add('Shougo/neocomplete.vim')
+call dein#add('Shougo/vimproc.vim',{'build': 'make'})
 call dein#add('vim-syntastic/syntastic')
 call dein#add('morhetz/gruvbox')
 call dein#add('vim-airline/vim-airline')
 call dein#add('scrooloose/nerdtree')
+call dein#add('leafgarland/typescript-vim')
+call dein#add('Quramy/tsuquyomi')
+call dein#add('rhysd/vim-clang-format')
 
 call dein#end()
 call dein#save_state()
