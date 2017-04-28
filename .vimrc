@@ -17,15 +17,35 @@ call dein#add('scrooloose/nerdtree')
 call dein#add('leafgarland/typescript-vim')
 call dein#add('Quramy/tsuquyomi')
 call dein#add('rhysd/vim-clang-format')
+call dein#add('mhinz/vim-startify')
 
 call dein#end()
 call dein#save_state()
 
 colorscheme gruvbox
+let g:gruvbox_contrast_dark='hard'
 set background=dark
+
+" Startify configuration
+let g:startify_change_to_dir=0
+let g:startify_relative_path=1
+let g:startify_list_order=[
+            \ ['   Most Recently Used'],
+            \ 'dir',
+            \ 'bookmarks',
+            \ 'sessions',
+            \ 'commands'
+            \ ]
 
 " JS configuration
 let g:syntastic_javascript_checkers=['jshint']
+" TS configuration
+let g:tsuquyomi_disable_quickfix=1
+let g:syntastic_typescript_checkers=['tsuquyomi']
+" C++ configuration
+let g:syntastic_cpp_compiler='clang++'
+let g:syntastic_cpp_compiler_options='-std=c++11 -Werror'
+let g:syntastic_cpp_check_header=1
 
 " Markdown configuration
 au BufRead,BufNewFile *.md setlocal textwidth=80
