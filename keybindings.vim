@@ -29,3 +29,6 @@ inoremap <A-u> <C-o>u
 inoremap <A-d> <C-o>dw
 inoremap <A-D> <C-o>D
 inoremap <A-;> <C-o>:
+
+" TS keybindings
+autocmd FileType typescript nmap <buffer> <Leader>t :<C-u>echo tsuquyomi#hint()<CR>
