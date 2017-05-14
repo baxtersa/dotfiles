@@ -50,6 +50,8 @@ let g:syntastic_cpp_check_header=1
 
 " Markdown configuration
 au BufRead,BufNewFile *.md setlocal textwidth=80
+" TeX configuration
+au BufRead,BufNewFile *.tex setlocal textwidth=80
 
 " Source custom keybinding configuration
 so ~/.nvim/keybindings.vim
