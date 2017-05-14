@@ -17,6 +17,7 @@ call dein#add('scrooloose/nerdtree')
 call dein#add('leafgarland/typescript-vim')
 call dein#add('Quramy/tsuquyomi')
 call dein#add('rhysd/vim-clang-format')
+call dein#add('fatih/vim-go')
 call dein#add('mhinz/vim-startify')
 
 call dein#end()
