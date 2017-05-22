@@ -8,9 +8,6 @@ nnoremap <Leader>ft :NERDTreeToggle<CR>
 " Find shortcuts
 nnoremap <Leader>s :find
 
-" Better Whitespace
-nnoremap <Leader>xd :StripWhitespace<CR>
-
 " Insert-Mode Meta binding
 inoremap <A-j> <C-o>j
 inoremap <A-k> <C-o>k
@@ -32,3 +29,5 @@ inoremap <A-;> <C-o>:
 
 " TS keybindings
 autocmd FileType typescript nmap <buffer> <Leader>t :<C-u>echo tsuquyomi#hint()<CR>
+" Go keybindings
+autocmd FileType go nmap <Leader>t <Plug>(go-info)

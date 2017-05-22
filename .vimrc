@@ -3,8 +3,8 @@ set runtimepath+=~/.nvim/dein/repos/github.com/Shougo/dein.vim
 set termguicolors
 set number
 set expandtab
-set shiftwidth=4
-set tabstop=4
+set shiftwidth=2
+set tabstop=2
 
 call dein#begin(expand('~/.nvim/dein')) " plugins' root path
 call dein#add('Shougo/dein.vim')
@@ -19,6 +19,7 @@ call dein#add('Quramy/tsuquyomi')
 call dein#add('rhysd/vim-clang-format')
 call dein#add('fatih/vim-go')
 call dein#add('mhinz/vim-startify')
+call dein#add('terryma/vim-multiple-cursors')
 
 call dein#end()
 call dein#save_state()
