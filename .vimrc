@@ -20,6 +20,7 @@ call dein#add('rhysd/vim-clang-format')
 call dein#add('fatih/vim-go')
 call dein#add('mhinz/vim-startify')
 call dein#add('terryma/vim-multiple-cursors')
+call dein#add('ntpeters/vim-better-whitespace')
 
 call dein#end()
 call dein#save_state()
