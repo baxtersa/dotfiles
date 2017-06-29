@@ -6,6 +6,9 @@ set expandtab
 set shiftwidth=2
 set tabstop=2
 
+" Leader binding
+let g:mapleader=' '
+
 call dein#begin(expand('~/.nvim/dein')) " plugins' root path
 call dein#add('Shougo/dein.vim')
 call dein#add('Shougo/neocomplete.vim')

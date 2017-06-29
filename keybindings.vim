@@ -27,6 +27,15 @@ inoremap <A-d> <C-o>dw
 inoremap <A-D> <C-o>D
 inoremap <A-;> <C-o>:
 
+" Split-pane navigation
+nnoremap <silent> <Leader>\| :wincmd v<CR>
+nnoremap <silent> <Leader>- :wincmd h<CR>
+nnoremap <silent> <Leader>wl :wincmd l<CR>
+nnoremap <silent> <Leader>wk :wincmd k<CR>
+nnoremap <silent> <Leader>wj :wincmd j<CR>
+nnoremap <silent> <Leader>wh :wincmd h<CR>
+nnoremap <silent> <Leader>wq :wincmd q<CR>
+
 " TS keybindings
 autocmd FileType typescript nmap <buffer> <Leader>t :<C-u>echo tsuquyomi#hint()<CR>
 " Go keybindings
