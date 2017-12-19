@@ -36,6 +36,8 @@ nnoremap <silent> <Leader>wj :wincmd j<CR>
 nnoremap <silent> <Leader>wh :wincmd h<CR>
 nnoremap <silent> <Leader>wq :wincmd q<CR>
 
+imap kj <Esc>
+
 " TS keybindings
 autocmd FileType typescript nmap <buffer> <Leader>t :<C-u>echo tsuquyomi#hint()<CR>
 " Go keybindings
